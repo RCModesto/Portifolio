@@ -1,3 +1,5 @@
+/*document.addEventListener('contextmenu', event => event.preventDefault());
+
 /* Abre e fecha menu lateral em modo mobile */
 
 const menuMobile = document.querySelector(".menu-mobile");
@@ -28,7 +30,7 @@ navItem.forEach((item) => {
 const item = document.querySelectorAll("[data-anime]");
 
 const animeScroll = () => {
-  const windowTop = window.pageYOffset + window.innerHeight * 0.85 ;
+  const windowTop = window.pageYOffset + window.innerHeight * 0.85;
 
   item.forEach((element) => {
     if (windowTop > element.offsetTop) {
@@ -41,7 +43,7 @@ const animeScroll = () => {
 
 animeScroll();
 
-window.addEventListener("scroll", ()=>{
+window.addEventListener("scroll", () => {
   animeScroll();
 })
 
@@ -50,7 +52,7 @@ window.addEventListener("scroll", ()=>{
 const btnEnviar = document.querySelector('#btn-enviar')
 const btnEnviarLoader = document.querySelector('#btn-enviar-loader')
 
-btnEnviar.addEventListener("click", ()=>{
+btnEnviar.addEventListener("click", () => {
   btnEnviarLoader.style.display = "block";
   btnEnviar.style.display = "none"
 })
@@ -59,4 +61,4 @@ btnEnviar.addEventListener("click", ()=>{
 
 setTimeout(() => {
   document.querySelector('#alerta').style.display = 'none';
-}, 5000)
+}, 5000);

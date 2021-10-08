@@ -12,19 +12,23 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
-  background: #021124;
+  background: url("./img/bannerPortifolio.jpg.jpg") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
   overflow-y: auto;
   width: 300px;
   transition: all ease-in-out 0.5s;
   padding: 0 15px;
-  z-index: 9997;
+  z-index: 9997;  
 }
 
 #header .profile img {
-  margin: 15px auto;
+  margin: 110px auto;  
+  margin-bottom: 25px;
   display: block;
-  width: 120px;
-  border: 8px solid #2c2f3f;
+  width: 120px;  
   border-radius: 50%;
 }
 
@@ -38,19 +42,18 @@ body {
 }
 
 #header .profile .social-links a {
-  font-size: 1rem;
-  background: #212431;
-  color: #fff;
-  padding: 0.6rem;
-  margin-right: 1rem;
+  font-size: 1.5rem;  
+  color: #fff;  
+  margin-right: 2rem;
   border-radius: 50%;
   transition: 0.3s;
   text-decoration: none;
+  
 }
 
-#header .profile .social-links a:hover {
+/*#header .profile .social-links a:hover {
   background: #149ddd;
-}
+}*/
 
 .nav-menu {
   padding: 1.5rem;
@@ -116,7 +119,8 @@ section#inicio span#subtitle {
 }
 
 section#inicio div#arraste {
-  width: 9rem;
+  padding-bottom: 100px;
+  width: 15rem;
 }
 
 section#inicio div#arraste a {
