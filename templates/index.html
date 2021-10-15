@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../static/style.css">
     <link rel="icon" type='image/png' href="../static/img/asset-15.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>RCTEM</title>
 </head>
 
@@ -71,9 +73,11 @@
             </div>
 
             <div class="col-md-7 d-flex justify-content-end align-items-end">
-                <div id="arraste" class="d-flex align-items-center">
-                    <a href="#sobre"><i class="bi bi-arrow-down text-white pe-2 fs-2" aria-hidden="true"></i>Arrate para
-                        mais</a>
+                <div id="arraste" class=" d-flex align-items-center">
+                    <a href="#sobre" class="">
+                        <div class="floating"><i class="bi bi-arrow-down text-white pe-2 fs-2 " aria-hidden="true"></i>
+                        </div>Arrate para mais
+                    </a>
                 </div>
             </div>
         </section>
@@ -83,7 +87,8 @@
                 <div class="col-md-12" data-anime="down">
                     <h2 class='pt-3'>Sobre</h2>
                     <p>Procuro uma oportunidade na área de desenvolvimento, pois com as minhas habilidades comportamentais e as experiências adquiridas na área militar e ao longo dos meus estágios e nas demais iniciativas privadas por onde passei, acredito
-                        que com dedicação e empenho consiga demonstrar todo meu potencial e habilidades. Espero estar em uma empresa em que possa contribuir para meu desenvolvimento, e eu possa retribuir com projetos inovadores</p>
+                        que com dedicação e empenho consiga demonstrar todo meu potencial e habilidades. Espero estar em uma empresa em que possa contribuir para meu desenvolvimento, e eu possa retribuir com projetos inovadores
+                    </p>
                 </div>
             </div>
 
@@ -107,8 +112,6 @@
                         </div>
                         <div class="col-md-6">
                             <ul class="list-group list-group-flush fs-5">
-                                <li class="list-group-item">Situação: <span class="fw-lighter">Casado</span></li>
-                                <li class="list-group-item">Filho(s): <span class="fw-lighter">1</span></li>
                                 <li class="list-group-item">Hobby: <span class="fw-lighter">Violino e Futebol</span>
                                 </li>
                             </ul>
@@ -131,13 +134,15 @@
 
                 <ul class="nav nav-pills mb-12" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-desen-tab" data-bs-toggle="pill" data-bs-target="#pills-desen" type="button" role="tab" aria-controls="pills-desen" aria-selected="true">Desenvolvimento</button>
+                        <button class="nav-link  active" id="pills-desen-tab" data-bs-toggle="pill" data-bs-target="#pills-desen" type="button" role="tab" aria-controls="pills-desen" aria-selected="true">Desenvolvimento</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-contab-tab" data-bs-toggle="pill" data-bs-target="#pills-contab" type="button" role="tab" aria-controls="pills-contab" aria-selected="false">Contabilidade</button>
                     </li>
                 </ul>
+
                 <div class="tab-content" id="pills-tabContent">
+                    <h4 class='pt-5'>Técnicas</h4>
                     <!--Desenvolvimento-->
                     <div class="tab-pane fade show active" id="pills-desen" role="tabpanel" aria-labelledby="pills-desen-tab">
                         <div class="row">
@@ -204,7 +209,7 @@
                         </div>
                     </div>
                     <!--Contabilidade-->
-                    <div class="tab-pane fade" id="pills-contab" role="tabpanel" aria-labelledby="pills-contab-tab">
+                    <div class="tab-pane fade show " id="pills-contab" role="tabpanel" aria-labelledby="pills-contab-tab">
                         <div class="row">
                             <div class="col-md-6">
                                 <p class='mt-3 mb-0'>Folha de Pagamento</p>
@@ -246,11 +251,11 @@
                                 <div class="progress">
                                     <div class="progress-bar" data-anime="left" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
                                 </div>
-                                <!--<p class="mt-3 mb-0">NodeJs (Express)</p>
+                                <p class="mt-3 mb-0">DCTweb</p>
                                 <div class="progress">
-                                    <div class="progress-bar" data-anime="left" role="progressbar" style="width: 85%;"
-                                        aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                    <div class="progress-bar" data-anime="left" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
                                 </div>
+                                <!--
                                 <p class="mt-3 mb-0">Flask</p>
                                 <div class="progress">
                                     <div class="progress-bar" data-anime="left" role="progressbar" style="width: 80%;"
@@ -276,46 +281,69 @@
                     </div>
                 </div>
 
-
-
                 <hr class='w-50 me-auto ms-auto'>
 
                 <div class="row">
-                    <div class="col-md-6">
-                        <p class="mt-3 mb-0">Trabalho em equipe</p>
-                        <div class="progress">
-                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-                        </div>
+                    <h4 class='pt-5'>Não Técnicas</h4>
 
-                        <p class="mt-3 mb-0">Proatividade</p>
-                        <div class="progress">
-                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 98%;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">98%</div>
+                    <div class="col-md-4">
+                        <div class="progress-circle" data-anime="left">
+                            <div class="circle_percent" data-percent="87">
+                                <div class="circle_inner">
+                                    <div class="round_per"></div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0">Trabalho em equipe</p>
                         </div>
-
-                        <p class="mt-3 mb-0">Orientação a detalhes</p>
-                        <div class="progress">
-                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                        <div class="progress-circle" data-anime="left">
+                            <div class="circle_percent" data-percent="96">
+                                <div class="circle_inner">
+                                    <div class="round_per"></div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0">Proatividade</p>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <p class="mt-3 mb-0">Comunicação</p>
-                        <div class="progress">
-                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                    <div class="col-md-4">
+                        <div class="progress-circle" data-anime="left">
+                            <div class="circle_percent" data-percent="80">
+                                <div class="circle_inner">
+                                    <div class="round_per"></div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0">Comunicação</p>
                         </div>
 
-                        <p class="mt-3 mb-0">Empatia</p>
-                        <div class="progress">
-                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                        <div class="progress-circle" data-anime="left">
+                            <div class="circle_percent" data-percent="95">
+                                <div class="circle_inner">
+                                    <div class="round_per"></div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0">Empatia</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="progress-circle" data-anime="left">
+                            <div class="circle_percent" data-percent="92">
+                                <div class="circle_inner">
+                                    <div class="round_per"></div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0">Comprometimento</p>
                         </div>
 
-                        <p class="mt-3 mb-0">Comprometimento</p>
-                        <div class="progress">
-                            <div class="progress-bar" data-anime="left" role="progressbar" style="width: 98%;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">98%</div>
+                        <div class="progress-circle" data-anime="left">
+                            <div class="circle_percent" data-percent="85">
+                                <div class="circle_inner">
+                                    <div class="round_per"></div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0">Orientação a detalhes</p>
                         </div>
                     </div>
                 </div>
-            </div>
-
         </section>
 
         <section class="mt-5 cv" id="curriculo">
@@ -420,7 +448,8 @@
                                 <p><em>Contínuo</em></p>
                             </div>
                             <p>Recebimento de documentos e manutenção dos mesmos, Arquivo de documentos, Atendimento ao público Interno e Externo (recepção), lançamento de Notas Fiscais, Protocolo e Manutenção de Atas de Reuniões, Serviços Externos com Valores
-                                entre outros. Obs: Tempo de serviço obrigatório no Exército Brasileiro 01 Março 2011.</p>
+                                entre outros. Obs: Tempo de serviço obrigatório no Exército Brasileiro 01 Março 2011.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -647,6 +676,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         {% endfor %} {% endif %} {% endwith %}
+
+
     </main>
 
     <footer id="footer">
