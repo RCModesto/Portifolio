@@ -1,7 +1,7 @@
 //document.addEventListener('contextmenu', event => event.preventDefault());
 
 //Bloquear imagens
-$('img').bind('contextmenu', function(e) {
+$('img').bind('contextmenu', function (e) {
     return false;
 });
 
@@ -50,9 +50,22 @@ const animeScroll = () => {
 
 animeScroll();
 
-window.addEventListener("scroll", () => {
-    animeScroll();
-})
+if (item.length) {
+    window.addEventListener("scroll", () => {
+        animeScroll();
+    })
+}
+
+// Se scroll passar em cima do botão mostrar uma mensagem 
+
+$(document).on('scroll', function () {
+    console.clear();   
+    if ($(this).scrollTop() >= $('#ini-btn-habil').position().top && $(this).scrollTop() <= $('#fim-btn-habil').position().top) {        
+        function myFunction(){
+            alert("Eu sou um alert!");
+        }
+    };
+});
 
 // Ativar carregamento no botão de enviar formulário para
 
@@ -71,8 +84,9 @@ setTimeout(() => {
 }, 5000);
 
 //Barra de Progresso 
-$(".circle_percent").each(function() {
-    var $this = $(this),
+  
+    $(".circle_percent").each(function () {
+        var $this = $(this),
         $dataV = $this.data("percent"),
         $dataDeg = $dataV * 3.6,
         $round = $this.find(".round_per");
@@ -81,17 +95,37 @@ $(".circle_percent").each(function() {
     $this.prop('Counter', 0).animate({ Counter: $dataV }, {
         duration: 2000,
         easing: 'swing',
-        step: function(now) {
+        step: function (now) {
             $this.find(".percent_text").text(Math.ceil(now) + "%");
         }
     });
-    if ($dataV >= 51) {
+    if ($dataV >= 51) {       
         $round.css("transform", "rotate(" + 360 + "deg)");
-        setTimeout(function() {
+        setTimeout(function () {
             $this.addClass("percent_more");
         }, 1000);
-        setTimeout(function() {
+        setTimeout(function () {
             $round.css("transform", "rotate(" + parseInt($dataDeg + 180) + "deg)");
         }, 1000);
     }
 });
+
+const boxes = document.querySelectorAll(".box");
+
+const checkBoxes = () => {
+    const triggerBottom = (window.innerHeight / 5) * 4;
+
+    boxes.forEach((box) => {
+        const boxTop = box.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+            box.classList.add("show");
+        } else {
+            box.classList.remove("show");
+        }
+    });
+};
+
+checkBoxes();
+
+window.addEventListener("scroll", checkBoxes);
