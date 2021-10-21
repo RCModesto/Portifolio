@@ -59,9 +59,9 @@ if (item.length) {
 // Se scroll passar em cima do botão mostrar uma mensagem 
 
 $(document).on('scroll', function () {
-    console.clear();   
-    if ($(this).scrollTop() >= $('#ini-btn-habil').position().top && $(this).scrollTop() <= $('#fim-btn-habil').position().top) {        
-        function myFunction(){
+    console.clear();
+    if ($(this).scrollTop() >= $('#ini-btn-habil').position().top && $(this).scrollTop() <= $('#fim-btn-habil').position().top) {
+        function myFunction() {
             alert("Eu sou um alert!");
         }
     };
@@ -84,9 +84,10 @@ setTimeout(() => {
 }, 5000);
 
 //Barra de Progresso 
-  
-    $(".circle_percent").each(function () {
-        var $this = $(this),
+
+
+$(".circle_percent").each(function () {
+    var $this = $(this),
         $dataV = $this.data("percent"),
         $dataDeg = $dataV * 3.6,
         $round = $this.find(".round_per");
@@ -99,7 +100,8 @@ setTimeout(() => {
             $this.find(".percent_text").text(Math.ceil(now) + "%");
         }
     });
-    if ($dataV >= 51) {       
+
+    if ($dataV >= 51) {
         $round.css("transform", "rotate(" + 360 + "deg)");
         setTimeout(function () {
             $this.addClass("percent_more");
@@ -108,7 +110,9 @@ setTimeout(() => {
             $round.css("transform", "rotate(" + parseInt($dataDeg + 180) + "deg)");
         }, 1000);
     }
+
 });
+
 
 const boxes = document.querySelectorAll(".box");
 

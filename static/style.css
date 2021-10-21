@@ -510,6 +510,7 @@ Coluna
     color: #fff;
     background-color: #252c90;
     padding-bottom: 16px;
+    font-size: 30px;
 }
 
 @media (max-width: 767px) {
@@ -526,6 +527,7 @@ Coluna
         border-top-right-radius: 1rem;
         color: #fff;
         background-color: #252c90;
+        font-size: 15px;
     }
 }
 
@@ -542,5 +544,6 @@ Coluna
         border-top-right-radius: 0.2rem;
         color: #fff;
         background-color: #252c90;
+        font-size: 10px;
     }
 }
