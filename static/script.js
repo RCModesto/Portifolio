@@ -85,7 +85,6 @@ setTimeout(() => {
 
 //Barra de Progresso 
 
-
 $(".circle_percent").each(function () {
     var $this = $(this),
         $dataV = $this.data("percent"),
@@ -110,7 +109,6 @@ $(".circle_percent").each(function () {
             $round.css("transform", "rotate(" + parseInt($dataDeg + 180) + "deg)");
         }, 1000);
     }
-
 });
 
 
